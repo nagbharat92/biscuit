@@ -1,0 +1,9 @@
+{
+  "name": "biscuit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biscuit, a pixel art tool for our games.",
+  "scripts": {
+    "dev": "python3 -m http.server 4317 --bind 127.0.0.1"
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Biscuit, a pixel art tool for our games.">
+    <title>Biscuit</title>
+    <link rel="icon" href="data:,">
+    <link rel="preload" href="./fonts/Silkscreen-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <h1><a class="wordmark" href="./">Biscuit</a></h1>
+      <p class="tagline">A pixel art tool for our games.</p>
+    </header>
+
+    <main>
+      <form>
+        <fieldset aria-describedby="depth-help">
+          <legend>Color depth</legend>
+          <p id="depth-help" class="field-help">Same character. Different palettes.</p>
+
+          <div class="choices">
+            <label class="choice">
+              <span class="choice-heading">
+                <span>1-bit</span>
+                <input type="radio" name="bit-depth" value="1" aria-label="1-bit, up to 2 colors">
+              </span>
+              <canvas width="64" height="64" data-depth="1" aria-hidden="true"></canvas>
+              <span class="color-count">2 colors</span>
+            </label>
+            <label class="choice">
+              <span class="choice-heading">
+                <span>2-bit</span>
+                <input type="radio" name="bit-depth" value="2" aria-label="2-bit, up to 4 colors">
+              </span>
+              <canvas width="64" height="64" data-depth="2" aria-hidden="true"></canvas>
+              <span class="color-count">4 colors</span>
+            </label>
+            <label class="choice">
+              <span class="choice-heading">
+                <span>4-bit</span>
+                <input type="radio" name="bit-depth" value="4" aria-label="4-bit, up to 16 colors">
+              </span>
+              <canvas width="64" height="64" data-depth="4" aria-hidden="true"></canvas>
+              <span class="color-count">16 colors</span>
+            </label>
+            <label class="choice">
+              <span class="choice-heading">
+                <span>8-bit</span>
+                <input type="radio" name="bit-depth" value="8" aria-label="8-bit, up to 256 colors">
+              </span>
+              <canvas width="64" height="64" data-depth="8" aria-hidden="true"></canvas>
+              <span class="color-count">256 colors</span>
+            </label>
+          </div>
+        </fieldset>
+        <p class="selection visually-hidden" role="status" aria-live="polite" aria-atomic="true">No color depth selected yet.</p>
+      </form>
+    </main>
+  </body>
+</html>
